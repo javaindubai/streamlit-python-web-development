@@ -26,10 +26,11 @@ hide_streamlit_style = """
                 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-st.title("Welcome to Streamlit Web Development Session")
+st.header("Welcome to Streamlit Web Development Session-1")
 
 
 def main():
+
     style_sidebar()
     main_body()
     return None
@@ -59,6 +60,9 @@ def style_sidebar():
 
 
 def main_body():
+    exp0 = st.expander("Watch Video Here")
+    with exp0:
+        st.video('https://youtu.be/alRsmcb_uLQ')
     exp1 = st.expander("How to create Python Virtual Environment in Command Prompt", expanded=False)
     with exp1:
         # st.subheader("How to create Python Virtual Environment in Command Prompt")
@@ -91,6 +95,12 @@ def main_body():
     exp3 = st.expander("How to create Conda  Environment in PyCharm IDE", expanded=False)
     with exp3:
         st.image('conda_pycharm.PNG')
+    exp4 = st.expander("Softwares Download Links", expanded=False)
+    with exp4:
+        st.markdown(''' <medium>Download [Python](https://www.python.org/downloads/)</medium> ''', unsafe_allow_html=True)
+        st.markdown(''' <medium>Download [Anaconda](https://www.anaconda.com/products/individual/)</medium> ''', unsafe_allow_html=True)
+        st.markdown(''' <medium>Download [PyCharm](https://www.jetbrains.com/pycharm/download/#section=windows)</medium> ''', unsafe_allow_html=True)
+        st.markdown(''' <medium>Download [Code](https://github.com/javaindubai/streamlit-python-web-development/tree/s1_install_hellowworld)</medium> ''', unsafe_allow_html=True)
 
 
 if __name__ == '__main__':
