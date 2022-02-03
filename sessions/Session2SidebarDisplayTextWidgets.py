@@ -18,9 +18,9 @@ def style_sidebar():
 
 
 def main_body():
-    exp0 = st.expander("Watch Video Here-Coming soon..")
+    exp0 = st.expander("Watch Video Here")
     with exp0:
-        st.subheader("Coming Soon...")
+        st.video('https://youtu.be/idhnmL5x4Q8')
 
     exp1 = st.expander("Example")
     with exp1:
