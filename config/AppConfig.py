@@ -13,3 +13,11 @@ search[
 topics = dict()
 topics['Installation Introduction and HelloWorld'] = [1, 'Session-1', 'Installation Introduction and HelloWorld', '31-01-2022', Session1HellowWorld]
 topics['Streamlit Sidebar and Display Widgets'] = [2, 'Session-2', 'Streamlit Sidebar and Display Widgets', '04-02-2022', Session2SidebarDisplayTextWidgets]
+
+
+text_elements = dict()
+text_elements['title'] = ''
+
+
+
+
