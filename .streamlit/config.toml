@@ -4,3 +4,10 @@ primaryColor="#6eb52f"
 secondaryBackgroundColor="#fddadda"
 textColor = "#262730"
 font="serif"
+
+[server]
+port=9999
+address='localhost'
+runOnSave= true
+enableCORS = true
+headless = true

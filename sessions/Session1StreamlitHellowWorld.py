@@ -1,46 +1,17 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title='Introduction, Installation and HelloWorld',
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
-hide_streamlit_style = """
-                <style>
-                #MainMenu {visibility: hidden;}
-                footer {visibility: hidden;}
-                .css-1l40rdr { text-align: left;}
-                .css-sc0g0 { text-align: center;}
-                #h1 { color: #431c5d }
-                #h1 { color: #bccbde }
-                #h1 { color: #cdd422 }
-                #h1 { color: #3fb0ac }
-                h1 { color: #431c5d }
-                h2 { color: #431c5d }
-                h3 { color: #3fb0ac }
-                .css-145kmo2 { color: #3fb0ac }
-                .css-h9oeas { color: #431c5d }
-                .css-hi6a2p { max-width: 60% }
-                </style>
-                """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-st.header("Welcome to Streamlit Web Development Session-1")
-
-
-def main():
-
-    style_sidebar()
-    main_body()
+def main(topic):
+    st.header(str(topic))
+    sub = 'Introduction, Installation and HelloWorld'
+    style_sidebar(sub, topic)
+    main_body(sub)
     return None
 
 
-def style_sidebar():
-    st.sidebar.markdown('''
-    <small>This session Tutor [Javalingappa](https://www.linkedin.com/in/javalingappa/), Download code here  [Github](https://github.com/javaindubai/streamlit-python-web-development/tree/s1_install_hellowworld).</small>
-        ''', unsafe_allow_html=True)
-    st.sidebar.header('Introduction, Installation and HelloWorld')
+def style_sidebar(sub, topic):
+    st.sidebar.subheader(sub)
+    st.sidebar.video('https://www.youtube.com/watch?v=FV1AXGzSZLk')
     st.sidebar.markdown('__How to install and import__')
     st.sidebar.code('pip install streamlit')
     st.sidebar.markdown('__How to run default streamlit hello__')
@@ -59,10 +30,10 @@ def style_sidebar():
     st.sidebar.code('streamlit hello')
 
 
-def main_body():
-    exp0 = st.expander("Watch Video Here")
+def main_body(sub):
+    exp0 = st.expander("Watch Full Video Of "+str(sub)+" Tutorial")
     with exp0:
-        st.video('https://youtu.be/alRsmcb_uLQ')
+        st.video('https://www.youtube.com/watch?v=alRsmcb_uLQ')
     exp1 = st.expander("How to create Python Virtual Environment in Command Prompt", expanded=False)
     with exp1:
         # st.subheader("How to create Python Virtual Environment in Command Prompt")
@@ -102,6 +73,5 @@ def main_body():
         st.markdown(''' <medium>Download [PyCharm](https://www.jetbrains.com/pycharm/download/#section=windows)</medium> ''', unsafe_allow_html=True)
         st.markdown(''' <medium>Download [Code](https://github.com/javaindubai/streamlit-python-web-development/tree/s1_install_hellowworld)</medium> ''', unsafe_allow_html=True)
 
-
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
